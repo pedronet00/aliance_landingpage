@@ -10,7 +10,7 @@
       --primary:#5d87ff;
       --primary-dark:#1e3a8a;
       --muted:#f5f5f5;
-      --bg-hero: url("https://api.aliance.app.br/api-estagio/public/storage/aliance/intro-bg.jpg");
+      --bg-hero: url(assets/images/intro-bg.jpg);
       --text:#222;
       --radius:12px;
       --card-shadow: 0 8px 30px rgba(30,40,60,0.08);
@@ -68,18 +68,33 @@
     .nav-links a:hover{background:rgba(255,255,255,0.06)}
 
     /* HERO */
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      text-align:center;
-      padding:120px 1rem 60px; /* top to avoid fixed nav */
-      background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,1)), url('./assets/images/intro-bg.jpg');
-      background-size:cover;
-      background-position:center;
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      padding: 120px 1rem 60px; /* Ajuste para o espaço da navbar fixa */
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)), var(--bg-hero);
+      background-size: cover;
+      background-position: center;
+      animation: zoomInOut 22s ease-in-out infinite; /* Adicionando a animação */
     }
+
+    /* Animação de Zoom (7s para aumentar, 7s para voltar ao normal) */
+    @keyframes zoomInOut {
+      0% {
+        background-size: 100%; /* Tamanho original */
+      }
+      50% {
+        background-size: 120%; /* Zoom in - aumenta 20% */
+      }
+      100% {
+        background-size: 100%; /* Tamanho original */
+      }
+    }
+
 
     .hero-card{
       max-width:980px;
@@ -140,6 +155,66 @@
       }
     }
 
+    /* FAQ Section */
+    #faq {
+      background-color: #fff;
+    }
+
+    /* Estilo do Acordeão */
+    .faq-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-question {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem;
+      font-size: 1.1rem;
+      text-align: left;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .faq-question:hover {
+      background-color: var(--primary-dark);
+    }
+
+    .faq-answer {
+      padding: 1rem;
+      background-color: #f9f9f9;
+      display: none;
+      border-radius: 0 0 8px 8px;
+    }
+
+    /* Ativar quando a resposta for visível */
+    .faq-answer.open {
+      display: block;
+    }
+
+    .faq-question::after {
+      content: '\002B'; /* Símbolo + */
+      font-size: 1.5rem;
+    }
+
+    .faq-question.open::after {
+      content: '\2212'; /* Símbolo - */
+    }
 
     /* MODULES / cards */
     .cards-grid{
@@ -230,6 +305,7 @@
       .cards-grid{grid-template-columns:repeat(2,1fr)}
       .pricing-grid{grid-template-columns:1fr}
       .principles-grid{grid-template-columns:1fr}
+      #login_vector{display:none;}
     }
     @media (max-width:640px){
       .cards-grid{grid-template-columns:1fr}
@@ -276,23 +352,22 @@
 
     <!-- ABOUT -->
     <section class="container reveal" id="about">
-  <div class="about-grid">
-    <div class="about-text">
-      <h2>Sobre nós</h2>
-      <p class="lead"><em>"Minha oração não é apenas por eles. Rogo também por aqueles que crerão em mim, por meio da mensagem deles, para que todos sejam um, Pai, como tu estás em mim e eu em ti. Que eles também estejam em nós, para que o mundo creia que tu me enviaste."</em> — João 17:20-21</p><br/>
-      <p>
-        Nossa missão é proporcionar <b>ferramentas que ajudem as igrejas a crescerem em suas atividades e no relacionamento com seus membros</b>.
-        Acreditamos que o Corpo de Cristo merece uma gestão organizada e eficiente para alcançar mais pessoas e servir melhor sua comunidade.
-      </p>
-    </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>Sobre nós</h2>
+          <p class="lead"><em>"Minha oração não é apenas por eles. Rogo também por aqueles que crerão em mim, por meio da mensagem deles, para que todos sejam um, Pai, como tu estás em mim e eu em ti. Que eles também estejam em nós, para que o mundo creia que tu me enviaste."</em> — João 17:20-21</p><br/>
+          <p>
+            Nossa missão é proporcionar <b>ferramentas que ajudem as igrejas a crescerem em suas atividades e no relacionamento com seus membros</b>.
+            Acreditamos que o Corpo de Cristo merece uma gestão organizada e eficiente para alcançar mais pessoas e servir melhor sua comunidade.
+          </p>
+        </div>
 
-    <div class="about-image">
-      <img src="./assets/images/christ-vector-png.png" style="background: none;"
-           alt="Christian event illustration">
-    </div>
-  </div>
-</section>
-
+        <div class="about-image">
+          <img src="./assets/images/christ-vector-png.png" style="background: none;"
+              alt="Christian event illustration">
+        </div>
+      </div>
+    </section>
 
     <!-- FEATURES / MODULES -->
     <section style="background:var(--muted)" id="features" aria-label="Módulos">
@@ -364,17 +439,6 @@
       </div>
     </div>
 
-    <!-- VIDEO -->
-    <!-- <section class="container reveal">
-      <div style="text-align:center">
-        <h2>Veja como nosso ERP pode transformar sua igreja!</h2>
-        <p class="lead">Assista ao vídeo abaixo e confira algumas funcionalidades.</p>
-      </div>
-      <div style="margin-top:1.25rem" class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/hvUkautKG6c?si=HfI8zGwFRxRj4Kmk" title="YouTube video player" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
-      </div>
-    </section> -->
-
     <!-- PRICING -->
     <section style="background:var(--muted)" id="pricing">
       <div class="container">
@@ -396,7 +460,7 @@
           </div>
 
           <div class="pricing-card featured">
-            <h4 style="color:#fff">PADRÃO</h4>
+            <h4 style="color:#fff">ESSENCIAL</h4>
             <div class="price" style="color:#fff">R$ 119,90 <span style="font-size:.6rem;font-weight:600">/mês</span></div>
             <p style="color:rgba(255,255,255,0.95)">Recursos completos para igrejas médias</p>
             <hr style="border-color:rgba(255,255,255,0.12);margin:.75rem 0">
@@ -411,55 +475,54 @@
             <div class="price">R$ 199 <span style="font-size:.7rem;font-weight:600">/mês</span></div>
             <p>Recursos completos para igrejas grandes</p>
             <hr style="margin:.75rem 0">
-            <p>Até 500 usuários<br>Até 20 departamentos<br>15 missões</p>
+            <p>Sem limite de usuários<br>Sem limite de departamentos<br>Sem limite de missões</p>
             <div style="margin-top:1rem">
-              <button class="btn secondary" onclick="window.location.href='https://erp.aliance.app.br/registrar'">Escolher Plano</button>
+              <button class="btn" onclick="window.location.href='https://erp.aliance.app.br/registrar'">Escolher Plano</button>
             </div>
           </div>
         </div>
-
-        <p style="text-align:center;margin-top:1.25rem">Para um plano superior ao Premium, contate o suporte.</p>
       </div>
     </section>
 
     <!-- STEPS -->
     <section class="container reveal">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:center">
-        <div>
-          <h2>Para começar <span style="color:var(--primary);font-weight:800">é muito fácil!</span></h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:center">
+    <div>
+      <h2>Para começar <span style="color:var(--primary);font-weight:800">é simples e rápido</span></h2>
 
-          <div style="margin-top:1rem">
-            <div class="step">
-              <div class="num">01</div>
-              <div>
-                <h3>Conta</h3>
-                <p>Registre sua igreja no sistema com informações básicas.</p>
-              </div>
-            </div>
-
-            <div class="step" style="margin-top:1rem">
-              <div class="num">02</div>
-              <div>
-                <h3>Plano</h3>
-                <p>Escolha um plano e realize o pagamento.</p>
-              </div>
-            </div>
-
-            <div class="step" style="margin-top:1rem">
-              <div class="num">03</div>
-              <div>
-                <h3>Comece a usar!</h3>
-                <p>Você terá 15 dias para testar as funcionalidades do Aliance.</p>
-              </div>
-            </div>
+      <div style="margin-top:1rem">
+        <div class="step">
+          <div class="num">01</div>
+          <div>
+            <h3>Conta</h3>
+            <p>Crie a conta da sua igreja informando apenas os dados essenciais para iniciar o acesso.</p>
           </div>
         </div>
 
-        <div>
-          <img src="https://img.freepik.com/premium-vector/mobile-login-flat-design-vector-illustration_1288538-7539.jpg" alt="Mobile Login">
+        <div class="step" style="margin-top:1rem">
+          <div class="num">02</div>
+          <div>
+            <h3>Plano</h3>
+            <p>Selecione o plano mais adequado e conclua o pagamento de forma segura.</p>
+          </div>
+        </div>
+
+        <div class="step" style="margin-top:1rem">
+          <div class="num">03</div>
+          <div>
+            <h3>Comece a usar</h3>
+            <p>O sistema é liberado na hora, com 15 dias para testar todos os recursos sem compromisso.</p>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <div>
+      <img id="login_vector" src="https://img.freepik.com/premium-vector/mobile-login-flat-design-vector-illustration_1288538-7539.jpg" alt="Mobile Login">
+    </div>
+  </div>
+</section>
+
 
     <!-- PRINCIPLES -->
     <section class="container reveal">
@@ -522,6 +585,57 @@
       </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" style="padding: 4rem 0;">
+      <div class="container">
+        <h2 style="text-align: center;">Perguntas Frequentes</h2>
+        <p style="text-align: center; margin-bottom: 2rem;">Veja algumas dúvidas comuns e suas respostas.</p>
+
+        <!-- Acordeão -->
+        <div class="faq-container">
+          <!-- Pergunta 1 -->
+          <div class="faq-item">
+            <button class="faq-question">O que é o Aliance | ERP para igrejas?</button>
+            <div class="faq-answer">
+              <p>
+                O Aliance é um ERP <i>(Enterprise Resource Planning)</i> desenvolvido especificamente para igrejas. 
+                Ele centraliza processos administrativos em uma única plataforma, oferecendo módulos para controle financeiro, gestão de membros, organização de eventos e demais operações essenciais.
+              </p>
+
+            </div>
+          </div>
+
+          <!-- Pergunta 2 -->
+          <div class="faq-item">
+            <button class="faq-question">Como posso começar a usar o Aliance?</button>
+            <div class="faq-answer">
+              <p>
+                Você pode iniciar o uso do Aliance imediatamente selecionando a opção “Comece gratuitamente” em nosso site e registrando sua igreja. 
+                O sistema oferece 15 dias de utilização gratuita para avaliação completa da plataforma.
+              </p>
+
+            </div>
+          </div>
+
+          <!-- Pergunta 3 -->
+          <div class="faq-item">
+            <button class="faq-question">O Aliance tem suporte?</button>
+            <div class="faq-answer">
+              <p>Sim! Oferecemos suporte completo para nossos clientes. Você pode entrar em contato conosco a qualquer momento através dos canais de comunicação disponíveis: Whatsapp e Email.</p>
+            </div>
+          </div>
+
+          <!-- Pergunta 4 -->
+          <div class="faq-item">
+            <button class="faq-question">Quais são os planos oferecidos pelo Aliance?</button>
+            <div class="faq-answer">
+              <p>Oferecemos o plano Básico, Essencial e Premium. Cada plano tem diferentes recursos e preços. Consulte nossa seção de preços para mais detalhes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FOOTER -->
     <footer>
       <div class="container">
@@ -537,6 +651,26 @@
       <div class="back"></div>
     </div>
   </a>
+
+  <script>
+    // Seleciona todos os botões de perguntas
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    // Adiciona o evento de clique para cada pergunta
+    faqQuestions.forEach((question) => {
+      question.addEventListener('click', () => {
+        // Alterna a visibilidade da resposta
+        const answer = question.nextElementSibling; // Pega a div de resposta ao lado da pergunta
+
+        // Alterna a classe 'open' na resposta (abre ou fecha)
+        answer.classList.toggle('open');
+
+        // Alterna a classe 'open' na pergunta para mostrar o ícone de menos (+ ou -)
+        question.classList.toggle('open');
+      });
+    });
+  </script>
+
 
   <script>
     // Small helpers & behavior: reveal on scroll + modal + form submit
