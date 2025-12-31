@@ -11,353 +11,86 @@
     gtag('config', 'AW-17840578641');
   </script>
   <meta charset="utf-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css" />
   <title>Aliance | ERP para igrejas</title>
-  <style>
-    :root{
-      --primary:#5d87ff;
-      --primary-dark:#1e3a8a;
-      --muted:#f5f5f5;
-      --bg-hero: url(assets/images/intro-bg.jpg);
-      --text:#222;
-      --radius:12px;
-      --card-shadow: 0 8px 30px rgba(30,40,60,0.08);
-      --glass: rgba(255,255,255,0.06);
-      --container: 1100px;
-      --whatsapp: #000;
-    }
-
-    /* Reset básico */
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-      background:#fff;
-    }
-
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-
-    .container{
-      width:100%;
-      max-width:var(--container);
-      margin:0 auto;
-      padding:0 1rem;
-    }
-
-    #contact{
-      margin-top: 5%;
-    }
-
-    /* NAVBAR */
-    header.nav{
-      background:rgba(0,0,0,0.8);
-      color:#fff;
-      position:fixed;
-      top:0;left:0;right:0;
-      z-index:80;
-      backdrop-filter: blur(6px);
-    }
-    .nav-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      height:64px;
-      gap:1rem;
-    }
-    .nav-brand{display:flex;align-items:center;gap:.75rem;cursor:pointer}
-    .nav-brand img{height:38px}
-    .nav-links{display:flex;gap:1rem;align-items:center}
-    .nav-links a{color:#fff;padding:.5rem .6rem;border-radius:8px;font-weight:600;font-size:.95rem}
-    .nav-links a:hover{background:rgba(255,255,255,0.06)}
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-align: center;
-      padding: 120px 1rem 60px; /* Ajuste para o espaço da navbar fixa */
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)), var(--bg-hero);
-      background-size: cover;
-      background-position: center;
-      animation: zoomInOut 22s ease-in-out infinite; /* Adicionando a animação */
-    }
-
-    /* Animação de Zoom (7s para aumentar, 7s para voltar ao normal) */
-    @keyframes zoomInOut {
-      0% {
-        background-size: 100%; /* Tamanho original */
-      }
-      50% {
-        background-size: 120%; /* Zoom in - aumenta 20% */
-      }
-      100% {
-        background-size: 100%; /* Tamanho original */
-      }
-    }
-
-
-    .hero-card{
-      max-width:980px;
-      width:100%;
-      padding:2.25rem;
-      border-radius:20px;
-      position:relative;
-      z-index:2;
-      text-align:center;
-    }
-
-    .hero h1{font-size:clamp(1.6rem,3.2vw,2.6rem);margin-bottom:.6rem}
-    .hero p{font-size:1.05rem;margin-bottom:1rem;opacity:.95}
-    .btn{
-      display:inline-block;padding:.8rem 1.25rem;border-radius:12px;font-weight:700;cursor:pointer;border:0;
-      background:var(--primary); color:#fff;
-      transition:all .22s ease;
-    }
-    .btn.secondary{background:transparent;color:var(--primary);border:2px solid var(--primary)}
-    .btn:hover{transform:translateY(-3px)}
-
-    /* Sections */
-    section{padding:4rem 0}
-    h2{font-size:1.6rem;margin-bottom:.5rem}
-    h3{font-size:1.15rem;margin-bottom:.5rem}
-    p.lead{color:#949494;opacity:.95}
-
-    .grid{
-      display:grid;
-      gap:1.25rem;
-    }
-
-    /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.5rem;
-      align-items: center;
-    }
-
-    .about-text {
-      max-width: 600px;
-    }
-
-    .about-image img {
-      width: 100%;
-    }
-
-    /* Responsividade */
-    @media (max-width: 768px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      
-      .about-text p {
-        text-align: center;
-      }
-    }
-
-    /* FAQ Section */
-    #faq {
-      background-color: #fff;
-    }
-
-    /* Estilo do Acordeão */
-    .faq-container {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .faq-item {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .faq-question {
-      background-color: var(--primary);
-      color: white;
-      padding: 1rem;
-      font-size: 1.1rem;
-      text-align: left;
-      width: 100%;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      text-align: left;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .faq-question:hover {
-      background-color: var(--primary-dark);
-    }
-
-    .faq-answer {
-      padding: 1rem;
-      background-color: #f9f9f9;
-      display: none;
-      border-radius: 0 0 8px 8px;
-    }
-
-    /* Ativar quando a resposta for visível */
-    .faq-answer.open {
-      display: block;
-    }
-
-    .faq-question::after {
-      content: '\002B'; /* Símbolo + */
-      font-size: 1.5rem;
-    }
-
-    .faq-question.open::after {
-      content: '\2212'; /* Símbolo - */
-    }
-
-    /* MODULES / cards */
-    .cards-grid{
-      display:grid;
-      grid-template-columns: repeat(3,1fr);
-      gap:1rem;
-    }
-
-    .card{
-      background:#fff;border-radius:14px;padding:1rem;box-shadow:var(--card-shadow);cursor:pointer;
-      transition:transform .22s ease, box-shadow .22s ease;
-      display:flex;gap:1rem;align-items:center;
-    }
-    .card:hover{transform:translateY(-8px);box-shadow: 0 18px 40px rgba(20,30,80,0.08)}
-    .card .icon{
-      min-width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid #e6e6e6;
-      font-size:1.4rem;background:#fff;
-    }
-    .card .meta{flex:1}
-    .card .meta h4{margin-bottom:.25rem}
-    .card .meta p{font-size:.95rem;color:#555}
-
-    /* PRICING */
-    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-    .pricing-card{border-radius:12px;padding:1.25rem;background:#fff;box-shadow:var(--card-shadow);text-align:center}
-    .pricing-card.featured{background:var(--primary-dark);color:#fff}
-    .price{font-size:2rem;font-weight:800;margin:1rem 0}
-
-    /* VIDEO */
-    .video-wrapper{max-width:760px;margin:0 auto;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow)}
-    .video-wrapper iframe{width:100%;height:420px;border:0;display:block}
-
-    /* STEPS */
-    .steps{display:grid;grid-template-columns:1fr;gap:1rem}
-    .step{display:flex;gap:1rem;align-items:flex-start}
-    .step .num{font-size:1.6rem;font-weight:800;color:var(--primary);min-width:46px}
-
-    /* PRINCIPLES */
-    .principles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
-    .principle{position:relative;overflow:hidden;border-radius:12px;padding:1.5rem;background:#fff;box-shadow:var(--card-shadow);min-height:180px;transition:transform .4s}
-    .principle .content{transition:opacity .4s}
-    .principle .overlay{position:absolute;inset:0;background:rgba(0,0,0,0.7);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.05rem;opacity:0;visibility:hidden;transition:opacity .4s}
-    .principle:hover .overlay{opacity:1;visibility:visible}
-    .principle:hover .content{opacity:0;visibility:hidden}
-
-    /* CONTACT */
-    form{display:flex;flex-direction:column;gap:.75rem}
-    input[type="text"], input[type="email"], textarea{
-      padding:.85rem;border-radius:8px;border:1px solid #ddd;font-size:1rem;resize:vertical;background:#fff
-    }
-    textarea{min-height:120px}
-    .form-actions{display:flex;gap:.5rem}
-
-    /* FOOTER */
-    footer{background:#333;color:#fff;padding:1.25rem 0;text-align:center}
-
-    /* MODAL for card click */
-    .modal{
-      position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.5);
-      z-index:120;opacity:0;visibility:hidden;transition:opacity .18s;
-    }
-    .modal.show{opacity:1;visibility:visible}
-    .modal-card{background:linear-gradient(135deg,#6a82cc,#b06ab3);color:#fff;padding:2rem;border-radius:14px;max-width:520px;width:92%;box-shadow: 0 10px 35px rgba(0,0,0,0.35);position:relative}
-    .modal-close{position:absolute;right:12px;top:8px;font-size:22px;cursor:pointer;font-weight:700}
-
-    /* WHATSAPP floating */
-    .whatsapp{
-      position:fixed;right:1.75rem;bottom:1.75rem;width:64px;height:64px;border-radius:50%;background:var(--whatsapp);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,0.18);z-index:200;cursor:pointer;
-      perspective:1000px;
-    }
-    .flip{
-      width:100%;height:100%;border-radius:50%;position:relative;transform-style:preserve-3d;transition:transform .6s;
-      display:flex;align-items:center;justify-content:center;
-    }
-    .whatsapp:hover .flip{transform:rotateY(180deg)}
-    .front, .back{
-      position:absolute;inset:0;display:flex;align-items:center;justify-content:center;border-radius:50%;backface-visibility:hidden;
-    }
-    .front{color:#fff;font-size:26px}
-    .back{
-      transform:rotateY(180deg);
-      background-image:url('./assets/images/PNG\ BRANCO.png');
-      background-size:cover;background-position:center;
-    }
-
-    /* responsive */
-    @media (max-width:980px){
-      .cards-grid{grid-template-columns:repeat(2,1fr)}
-      .pricing-grid{grid-template-columns:1fr}
-      .principles-grid{grid-template-columns:1fr}
-      #login_vector{display:none;}
-    }
-    @media (max-width:640px){
-      .cards-grid{grid-template-columns:1fr}
-      .about-grid{grid-template-columns:1fr}
-      .hero{padding:100px 1rem 40px}
-      .video-wrapper iframe{height:220px}
-    }
-
-    /* simple reveal animation */
-    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
-    .reveal.in{opacity:1;transform:none}
-  </style>
 </head>
 <body>
 
   <!-- NAV -->
   <header class="nav" role="banner">
-    <div class="container nav-inner">
-      <div class="nav-brand" onclick="window.location='/'">
-        <img src="./assets/images/PNG BRANCO.png" style="width: 80px; height: 80px;" alt="Aliance logo">
-      </div>
-      <nav class="nav-links" role="navigation" aria-label="Main">
-        <a href="#features">Módulos</a>
-        <a href="#pricing">Planos</a>
-        <a href="#contact">Contato</a>
-        <a href="#contact" class="btn secondary" style="padding:.5rem .9rem">Comece grátis</a>
-      </nav>
+  <div class="container nav-inner">
+
+    <div class="nav-brand" onclick="window.location='/'">
+      <img src="./assets/images/PNG BRANCO.png"
+           alt="Aliance logo"
+           width="80"
+           height="80">
     </div>
-  </header>
+
+    <!-- BOTÃO HAMBURGUER -->
+    <button class="nav-toggle" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" role="navigation" aria-label="Main">
+      <a class="active" href="#">Home</a>
+
+      <div class="dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+          Soluções
+          <span class="dropdown-arrow">▾</span>
+        </button>
+
+        <div class="dropdown-menu" role="menu">
+          <a href="/membros" role="menuitem">Gestão de Membros</a>
+          <a href="/eventos" role="menuitem">Eventos</a>
+          <a href="/cultos" role="menuitem">Cultos</a>
+          <a href="/financeiro" role="menuitem">Financeiro</a>
+          <a href="/louvor" role="menuitem">Grupos de Louvor</a>
+          <a href="/relatorios" role="menuitem">Relatórios</a>
+        </div>
+      </div>
+
+      <a href="#pricing">Planos</a>
+      <a href="#contact">Contato</a>
+      <a href="#contact" class="btn secondary">Comece grátis</a>
+    </nav>
+
+  </div>
+</header>
+
 
   <!-- HERO -->
   <main>
     <section class="hero" role="main" aria-label="Apresentação">
-      <div class="container hero-card reveal">
-        <!-- <img src="PNG BRANCO 2.png" alt="Aliance" style="height:200px;margin:0 auto 1rem;cursor:pointer" onclick="window.location='/'"> -->
-        <h1>Gerencie a sua igreja com o Aliance</h1>
-        <p class="lead">Simplicidade, eficiência e fé trabalhando juntas.</p>
-        <div style="margin-top:1rem;display:flex;gap:.75rem;justify-content:center">
-          <button class="btn" onclick="window.location.href='https://erp.aliance.app.br/registrar'">Comece gratuitamente</button>
-          <a class="btn secondary" style="align-self:center" href="#features">Conheça os módulos</a>
+      <div class="hero-card reveal">
+
+        <h1>Centralize a gestão da sua igreja em um único sistema</h1>
+
+        <p>
+          Membros, eventos, financeiro e ministérios.
+          Tudo em um só lugar.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn" onclick="window.location.href='https://erp.aliance.app.br/registrar'">
+            Comece gratuitamente
+          </button>
+          <a class="btn secondary" href="#features">
+            Conheça os módulos
+          </a>
         </div>
+
       </div>
     </section>
+
 
     <!-- ABOUT -->
     <section class="container reveal" id="about">
@@ -661,125 +394,6 @@
     </div>
   </a>
 
-  <script>
-    // Seleciona todos os botões de perguntas
-    const faqQuestions = document.querySelectorAll('.faq-question');
-
-    // Adiciona o evento de clique para cada pergunta
-    faqQuestions.forEach((question) => {
-      question.addEventListener('click', () => {
-        // Alterna a visibilidade da resposta
-        const answer = question.nextElementSibling; // Pega a div de resposta ao lado da pergunta
-
-        // Alterna a classe 'open' na resposta (abre ou fecha)
-        answer.classList.toggle('open');
-
-        // Alterna a classe 'open' na pergunta para mostrar o ícone de menos (+ ou -)
-        question.classList.toggle('open');
-      });
-    });
-  </script>
-
-
-  <script>
-    // Small helpers & behavior: reveal on scroll + modal + form submit
-    (function(){
-      document.getElementById('year').textContent = new Date().getFullYear();
-
-      // Reveal on scroll: simple intersection observer
-      const io = new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{
-          if(e.isIntersecting) e.target.classList.add('in');
-        });
-      }, {threshold: 0.12});
-
-      document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
-
-      // Card modal logic
-      const cards = Array.from(document.querySelectorAll('.card'));
-      const modal = document.getElementById('cardModal');
-      const modalTitle = document.getElementById('modalTitle');
-      const modalDesc = document.getElementById('modalDesc');
-      const modalClose = document.getElementById('modalClose');
-
-      function openModal(title, desc){
-        modalTitle.textContent = title;
-        modalDesc.textContent = desc;
-        modal.classList.add('show');
-        modal.setAttribute('aria-hidden','false');
-      }
-      function closeModal(){
-        modal.classList.remove('show');
-        modal.setAttribute('aria-hidden','true');
-      }
-      cards.forEach(c=>{
-        c.addEventListener('click', function(){
-          openModal(this.dataset.title || this.querySelector('h4')?.textContent, this.dataset.desc || this.querySelector('p')?.textContent);
-        });
-      });
-      modalClose.addEventListener('click', closeModal);
-      modal.addEventListener('click', (e)=>{
-        if(e.target === modal) closeModal();
-      });
-      document.addEventListener('keydown', (e)=> { if(e.key === 'Escape') closeModal(); });
-
-      // Contact form submit (uses fetch)
-      const form = document.getElementById('contactForm');
-      const feedback = document.getElementById('formFeedback');
-      // Adjust this to your API endpoint if needed:
-      const FORM_ENDPOINT = '/contact';
-
-      form.addEventListener('submit', function(ev){
-        ev.preventDefault();
-        feedback.textContent = 'Enviando...';
-        const payload = {
-          name: form.name.value.trim(),
-          email: form.email.value.trim(),
-          message: form.message.value.trim()
-        };
-
-        // Basic validation
-        if(!payload.name || !payload.email || !payload.message){ feedback.textContent = 'Preencha todos os campos.'; return; }
-
-        fetch(FORM_ENDPOINT, {
-          method: 'POST',
-          headers: {'Content-Type':'application/json'},
-          body: JSON.stringify(payload)
-        })
-        .then(async res=>{
-          if(!res.ok) throw new Error('HTTP ' + res.status);
-          // assume JSON { status: 'success' } like original
-          const json = await res.json().catch(()=>({}));
-          if(json && (json.status === 'success' || res.status === 200)){
-            feedback.style.color = 'green';
-            feedback.textContent = 'Mensagem enviada com sucesso!';
-            form.reset();
-            setTimeout(()=> feedback.textContent = '', 3500);
-          } else {
-            feedback.style.color = 'crimson';
-            feedback.textContent = 'Falha ao enviar. Tente novamente.';
-          }
-        })
-        .catch(err=>{
-          console.error('form error', err);
-          feedback.style.color = 'crimson';
-          feedback.textContent = 'Erro ao conectar com o servidor.';
-        });
-      });
-
-      // Accessibility: keyboard focus for whatsapp button
-      const whatsapp = document.getElementById('whatsappBtn');
-      whatsapp.addEventListener('keydown', (e)=> { if(e.key === 'Enter'){ whatsapp.click(); } });
-
-      // Ensure external/background images load fallback: if main hero is 404, set solid color
-      const hero = document.querySelector('.hero');
-      const img = new Image();
-      img.src = "./assets/images/intro-bg.jpg";
-      img.onerror = ()=> {
-        hero.style.background = "linear-gradient(90deg,#1e3a8a,#5d87ff)";
-      };
-
-    })();
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
