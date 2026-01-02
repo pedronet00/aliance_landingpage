@@ -1,4 +1,30 @@
+const header = document.querySelector('header.nav');
+  const hero = document.querySelector('.hero');
 
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        header.classList.remove('scrolled');
+        console.log("chegou aquiiii")
+      } else {
+        header.classList.add('scrolled');
+        console.log("chegou aqui")
+      }
+    },
+    {
+      root: null,
+      threshold: 0,
+    }
+  );
+
+  observer.observe(hero);
+
+const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
 // Seleciona todos os botões de perguntas
 const faqQuestions = document.querySelectorAll('.faq-question');
 
@@ -115,28 +141,4 @@ faqQuestions.forEach((question) => {
 
 })();
 
-  const header = document.querySelector('header.nav');
-  const hero = document.querySelector('.hero');
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        header.classList.remove('scrolled');
-      } else {
-        header.classList.add('scrolled');
-      }
-    },
-    {
-      root: null,
-      threshold: 0,
-    }
-  );
-
-  observer.observe(hero);
-
-const navToggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-  });
+ 

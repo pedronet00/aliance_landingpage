@@ -23,49 +23,48 @@
 
   <!-- NAV -->
   <header class="nav" role="banner">
-  <div class="container nav-inner">
+    <div class="container nav-inner">
 
-    <div class="nav-brand" onclick="window.location='/'">
-      <img src="./assets/images/PNG BRANCO.png"
-           alt="Aliance logo"
-           width="80"
-           height="80">
-    </div>
-
-    <!-- BOTÃO HAMBURGUER -->
-    <button class="nav-toggle" aria-label="Abrir menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="nav-links" role="navigation" aria-label="Main">
-      <a class="active" href="#">Home</a>
-
-      <div class="dropdown">
-        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-          Soluções
-          <span class="dropdown-arrow">▾</span>
-        </button>
-
-        <div class="dropdown-menu" role="menu">
-          <a href="/membros" role="menuitem">Gestão de Membros</a>
-          <a href="/eventos" role="menuitem">Eventos</a>
-          <a href="/cultos" role="menuitem">Cultos</a>
-          <a href="/financeiro" role="menuitem">Financeiro</a>
-          <a href="/louvor" role="menuitem">Grupos de Louvor</a>
-          <a href="/relatorios" role="menuitem">Relatórios</a>
-        </div>
+      <div class="nav-brand" onclick="window.location='/'">
+        <img src="./assets/images/PNG BRANCO.png"
+            alt="Aliance logo"
+            width="80"
+            height="80">
       </div>
 
-      <a href="#pricing">Planos</a>
-      <a href="#contact">Contato</a>
-      <a href="#contact" class="btn secondary">Comece grátis</a>
-    </nav>
+      <!-- BOTÃO HAMBURGUER -->
+      <button class="nav-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-  </div>
-</header>
+      <nav class="nav-links" role="navigation" aria-label="Main">
+        <a class="active" href="#">Home</a>
 
+        <div class="dropdown">
+          <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Soluções
+            <span class="dropdown-arrow">▾</span>
+          </button>
+
+          <div class="dropdown-menu" role="menu">
+            <a href="/membros" role="menuitem">Gestão de Membros</a>
+            <a href="/eventos" role="menuitem">Eventos</a>
+            <a href="/cultos" role="menuitem">Cultos</a>
+            <a href="/financeiro" role="menuitem">Financeiro</a>
+            <a href="/louvor" role="menuitem">Grupos de Louvor</a>
+            <a href="/relatorios" role="menuitem">Relatórios</a>
+          </div>
+        </div>
+
+        <a href="#pricing">Planos</a>
+        <a href="#contact">Contato</a>
+        <a href="#contact" class="btn secondary">Comece grátis</a>
+      </nav>
+
+    </div>
+  </header>
 
   <!-- HERO -->
   <main>
@@ -90,221 +89,345 @@
 
       </div>
     </section>
-
+    
 
     <!-- ABOUT -->
-    <section class="container reveal" id="about">
-      <div class="about-grid">
-        <div class="about-text">
-          <h2>Sobre nós</h2>
-          <p class="lead"><em>"Minha oração não é apenas por eles. Rogo também por aqueles que crerão em mim, por meio da mensagem deles, para que todos sejam um, Pai, como tu estás em mim e eu em ti. Que eles também estejam em nós, para que o mundo creia que tu me enviaste."</em> — João 17:20-21</p><br/>
-          <p>
-            Nossa missão é proporcionar <b>ferramentas que ajudem as igrejas a crescerem em suas atividades e no relacionamento com seus membros</b>.
-            Acreditamos que o Corpo de Cristo merece uma gestão organizada e eficiente para alcançar mais pessoas e servir melhor sua comunidade.
+    <section class="about-v2" id="sobre-aliance">
+      <div class="container about-v2-grid">
+
+        <div class="about-v2-content">
+          <span class="about-eyebrow">Sobre o Aliance</span>
+
+          <h2>
+            Gestão inteligente para igrejas<br />
+            que querem crescer com organização
+          </h2>
+
+          <p class="about-description">
+            O <strong>Aliance</strong> é um sistema de gestão desenvolvido exclusivamente para igrejas.
+            Ele centraliza membros, ministérios, eventos, cultos, visitas pastorais e comunicação
+            em uma única plataforma, reduzindo o trabalho manual e aumentando o cuidado com as pessoas.
           </p>
+
+          <ul class="about-features">
+            <li>✔ Cadastro e acompanhamento de membros</li>
+            <li>✔ Organização de cultos, eventos e escalas</li>
+            <li>✔ Gestão de ministérios e grupos de louvor</li>
+            <li>✔ Registro de visitas e acompanhamento pastoral</li>
+            <li>✔ Comunicação interna e notificações</li>
+          </ul>
+
+          <div class="about-actions">
+            <a href="/demo" class="btn-primary">Ver demonstração</a>
+          </div>
         </div>
 
-        <div class="about-image">
-          <img src="./assets/images/christ-vector-png.png" style="background: none;"
-              alt="Christian event illustration">
+        <div class="about-v2-visual">
+          <img
+            src="./assets/images/celular-financeiro.png"
+            alt="Dashboard do sistema Aliance"
+          />
         </div>
+
       </div>
     </section>
 
     <!-- FEATURES / MODULES -->
-    <section style="background:var(--muted)" id="features" aria-label="Módulos">
+    <section class="features-v2" id="features" aria-label="Módulos do Aliance">
       <div class="container">
-        <div style="text-align:center;margin-bottom:1rem" class="reveal">
-          <h2>Nós temos módulos <span style="color:var(--primary);font-weight:800">incríveis</span>.</h2>
-          <p class="lead">Ajudamos a sua igreja a crescer e se organizar com ferramentas pensadas para você.</p>
+
+        <header class="features-header reveal">
+          <h2>
+            Tudo o que sua igreja precisa,<br />
+            <span>em um único sistema</span>
+          </h2>
+          <p>
+            O Aliance é composto por módulos integrados que organizam a gestão,
+            reduzem tarefas manuais e aumentam o cuidado com pessoas e ministérios.
+          </p>
+        </header>
+
+        <div class="features-grid reveal">
+
+          <article class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h4>Financeiro</h4>
+            <p>
+              Controle dízimos, ofertas, despesas e relatórios financeiros
+              com clareza e segurança.
+            </p>
+          </article>
+
+          <article class="feature-card highlight">
+            <div class="feature-icon">👥</div>
+            <h4>Gestão de Membros</h4>
+            <p>
+              Centralize dados, acompanhe histórico, visitas pastorais
+              e o envolvimento dos membros.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">📅</div>
+            <h4>Cultos e Eventos</h4>
+            <p>
+              Organize programações, escalas e agendas sem conflitos
+              e com total visibilidade.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🏛️</div>
+            <h4>Patrimônios</h4>
+            <p>
+              Inventário completo de bens, controle de uso
+              e histórico de manutenções.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h4>Escola Bíblica</h4>
+            <p>
+              Gestão de classes, professores, alunos e conteúdos
+              de forma organizada.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h4>Missões</h4>
+            <p>
+              Acompanhe projetos missionários, ações sociais
+              e resultados alcançados.
+            </p>
+          </article>
+
         </div>
 
-        <div class="cards-grid reveal" style="margin-top:2rem">
-          <!-- each card -->
-          <div class="card" data-title="Financeiro" data-desc="Contas, dízimos e finanças da igreja de forma organizada.">
-            <div class="icon">R$</div>
-            <div class="meta">
-              <h4>Financeiro</h4>
-              <p>Contas, dízimos e gestão financeira.</p>
-            </div>
-          </div>
-
-          <div class="card" data-title="Gestão de Membros" data-desc="Controle informações dos membros da sua igreja com facilidade.">
-            <div class="icon">👥</div>
-            <div class="meta">
-              <h4>Gestão de Membros</h4>
-              <p>Controle completo dos membros.</p>
-            </div>
-          </div>
-
-          <div class="card" data-title="Eventos e Programações" data-desc="Organize eventos e cultos de forma prática.">
-            <div class="icon">📅</div>
-            <div class="meta">
-              <h4>Eventos</h4>
-              <p>Programações, cultos e calendários.</p>
-            </div>
-          </div>
-
-          <div class="card" data-title="Patrimônios" data-desc="Gerencie os patrimônios da sua igreja, assim como suas manutenções.">
-            <div class="icon">⭐</div>
-            <div class="meta">
-              <h4>Patrimônios</h4>
-              <p>Inventário de patrimônios da igreja.</p>
-            </div>
-          </div>
-
-          <div class="card" data-title="Escola Bíblica Dominical" data-desc="Gerencie classes, alunos e conteúdos da escola bíblica.">
-            <div class="icon">📚</div>
-            <div class="meta">
-              <h4>Escola Bíblica</h4>
-              <p>Gestão de classes e conteúdos.</p>
-            </div>
-          </div>
-
-          <div class="card" data-title="Missões" data-desc="Acompanhe e organize as missões realizadas pela sua igreja.">
-            <div class="icon">🎯</div>
-            <div class="meta">
-              <h4>Missões</h4>
-              <p>Acompanhamento e organização.</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- Modal (hidden) -->
-    <div id="cardModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
-      <div class="modal-card" role="document">
-        <div class="modal-close" id="modalClose" aria-label="Fechar">✕</div>
-        <h3 id="modalTitle"></h3>
-        <p id="modalDesc" style="opacity:.95;margin-top:.5rem"></p>
-      </div>
-    </div>
-
     <!-- PRICING -->
-    <section style="background:var(--muted)" id="pricing">
+    <section class="pricing-v2" id="pricing">
       <div class="container">
-        <div style="text-align:center" class="reveal">
-          <h2>Planos que cabem <span style="color:var(--primary);font-weight:800">no orçamento!</span></h2>
-          <p class="lead">Todos os planos possuem <strong>15 dias de avaliação gratuita</strong>.</p>
+
+        <header class="pricing-header reveal">
+          <h2>
+            Planos simples e transparentes
+          </h2>
+          <p>
+            Todos os planos incluem acesso completo ao sistema e
+            <strong>15 dias de teste gratuito</strong>, sem fidelidade.
+          </p>
+        </header>
+
+        <div class="pricing-grid-v2 reveal">
+
+          <!-- Básico -->
+          <article class="pricing-card-v2">
+            <h4>Básico</h4>
+            <p class="pricing-desc">Ideal para igrejas pequenas</p>
+
+            <div class="pricing-price">
+              R$ 79,90 <span>/mês</span>
+            </div>
+
+            <ul class="pricing-features">
+              <li>Até 50 usuários</li>
+              <li>Até 5 departamentos</li>
+              <li>1 missão</li>
+              <li>Todos os módulos inclusos</li>
+              <li>Suporte via WhatsApp e e-mail</li>
+            </ul>
+
+            <a href="https://erp.aliance.app.br/registrar" class="btn-secondary">
+              Começar teste grátis
+            </a>
+          </article>
+
+          <!-- Essencial -->
+          <article class="pricing-card-v2 featured">
+            <span class="badge">Mais escolhido</span>
+
+            <h4>Essencial</h4>
+            <p class="pricing-desc">
+              Perfeito para igrejas em crescimento
+            </p>
+
+            <div class="pricing-price">
+              R$ 119,90 <span>/mês</span>
+            </div>
+
+            <ul class="pricing-features">
+              <li>Até 150 usuários</li>
+              <li>Até 10 departamentos</li>
+              <li>Até 5 missões</li>
+              <li>Todos os módulos inclusos</li>
+              <li>Suporte prioritário</li>
+            </ul>
+
+            <a href="https://erp.aliance.app.br/registrar" class="btn-primary">
+              Começar teste grátis
+            </a>
+          </article>
+
+          <!-- Premium -->
+          <article class="pricing-card-v2">
+            <h4>Premium</h4>
+            <p class="pricing-desc">
+              Para igrejas maiores ou multi-ministérios
+            </p>
+
+            <div class="pricing-price">
+              R$ 199,00 <span>/mês</span>
+            </div>
+
+            <ul class="pricing-features">
+              <li>Usuários ilimitados</li>
+              <li>Departamentos ilimitados</li>
+              <li>Missões ilimitadas</li>
+              <li>Todos os módulos inclusos</li>
+              <li>Suporte prioritário</li>
+            </ul>
+
+            <a href="https://erp.aliance.app.br/registrar" class="btn-secondary">
+              Começar teste grátis
+            </a>
+          </article>
+
         </div>
 
-        <div class="pricing-grid reveal" style="margin-top:2rem">
-          <div class="pricing-card">
-            <h4>BÁSICO</h4>
-            <div class="price">R$ 79,90 <span style="font-size:.7rem;font-weight:600">/mês</span></div>
-            <p>Recursos completos para igrejas pequenas</p>
-            <hr style="margin:.75rem 0">
-            <p>Até 50 usuários<br>Até 5 departamentos<br>1 missão</p>
-            <div style="margin-top:1rem">
-              <button class="btn" onclick="window.location.href='https://erp.aliance.app.br/registrar'">Escolher Plano</button>
-            </div>
-          </div>
+        <p class="pricing-footnote">
+          Cancele quando quiser. Sem contrato, sem multa.
+        </p>
 
-          <div class="pricing-card featured">
-            <h4 style="color:#fff">ESSENCIAL</h4>
-            <div class="price" style="color:#fff">R$ 119,90 <span style="font-size:.6rem;font-weight:600">/mês</span></div>
-            <p style="color:rgba(255,255,255,0.95)">Recursos completos para igrejas médias</p>
-            <hr style="border-color:rgba(255,255,255,0.12);margin:.75rem 0">
-            <p style="color:rgba(255,255,255,0.95)">Até 150 usuários<br>Até 10 departamentos<br>5 missões</p>
-            <div style="margin-top:1rem">
-              <button class="btn" style="background:#fff;color:var(--primary-dark)" onclick="window.location.href='https://erp.aliance.app.br/registrar'">Escolher Plano</button>
-            </div>
-          </div>
-
-          <div class="pricing-card">
-            <h4>PREMIUM</h4>
-            <div class="price">R$ 199 <span style="font-size:.7rem;font-weight:600">/mês</span></div>
-            <p>Recursos completos para igrejas grandes</p>
-            <hr style="margin:.75rem 0">
-            <p>Sem limite de usuários<br>Sem limite de departamentos<br>Sem limite de missões</p>
-            <div style="margin-top:1rem">
-              <button class="btn" onclick="window.location.href='https://erp.aliance.app.br/registrar'">Escolher Plano</button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
     <!-- STEPS -->
-    <section class="container reveal">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:center">
-    <div>
-      <h2>Para começar <span style="color:var(--primary);font-weight:800">é simples e rápido</span></h2>
+    <section class="onboarding-v2" id="como-funciona">
+      <div class="container onboarding-grid reveal">
 
-      <div style="margin-top:1rem">
-        <div class="step">
-          <div class="num">01</div>
-          <div>
-            <h3>Conta</h3>
-            <p>Crie a conta da sua igreja informando apenas os dados essenciais para iniciar o acesso.</p>
+        <div class="onboarding-content">
+          <span class="eyebrow">Como funciona</span>
+
+          <h2>
+            Comece a usar o Aliance<br />
+            <span>em poucos minutos</span>
+          </h2>
+
+          <p class="onboarding-description">
+            Sem contratos longos, sem burocracia e sem necessidade de suporte técnico.
+            Você cria a conta, escolhe o plano e já pode começar a organizar sua igreja.
+          </p>
+
+          <div class="onboarding-points">
+
+            <div class="point">
+              <span class="point-icon">⏱️</span>
+              <div>
+                <h4>Ativação imediata</h4>
+                <p>
+                  A conta é liberada na hora. Não precisa aguardar aprovação
+                  ou contato comercial.
+                </p>
+              </div>
+            </div>
+
+            <div class="point">
+              <span class="point-icon">🧪</span>
+              <div>
+                <h4>15 dias para testar</h4>
+                <p>
+                  Teste todas as funcionalidades do sistema sem compromisso
+                  e sem risco.
+                </p>
+              </div>
+            </div>
+
+            <div class="point">
+              <span class="point-icon">🔒</span>
+              <div>
+                <h4>Pagamento seguro</h4>
+                <p>
+                  Escolha o plano ideal e pague com total segurança,
+                  podendo cancelar quando quiser.
+                </p>
+              </div>
+            </div>
+
           </div>
+
+          <a href="https://erp.aliance.app.br/registrar" class="btn-primary onboarding-cta">
+            Criar conta gratuitamente
+          </a>
         </div>
 
-        <div class="step" style="margin-top:1rem">
-          <div class="num">02</div>
-          <div>
-            <h3>Plano</h3>
-            <p>Selecione o plano mais adequado e conclua o pagamento de forma segura.</p>
-          </div>
+        <div class="onboarding-visual">
+          <img
+            src="./assets/images/imagens.png"
+            alt="Tela inicial do Aliance"
+          />
         </div>
 
-        <div class="step" style="margin-top:1rem">
-          <div class="num">03</div>
-          <div>
-            <h3>Comece a usar</h3>
-            <p>O sistema é liberado na hora, com 15 dias para testar todos os recursos sem compromisso.</p>
-          </div>
-        </div>
       </div>
-    </div>
-
-    <div>
-      <img id="login_vector" src="https://img.freepik.com/premium-vector/mobile-login-flat-design-vector-illustration_1288538-7539.jpg" alt="Mobile Login">
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- PRINCIPLES -->
-    <section class="container reveal">
-      <h2 style="text-align:center;margin-bottom:1rem">Nossos <span style="color:var(--primary);font-weight:600">princípios e valores</span></h2>
-      <div class="principles-grid" style="margin-top:1rem">
-        <div class="principle">
-          <div class="content" style="text-align:center">
-            <div style="font-size:42px;margin-bottom:.4rem">🤝</div>
-            <h4>Comprometimento</h4>
-            <p>Estamos comprometidos em oferecer um serviço excepcional às igrejas de todo o Brasil.</p>
-          </div>
-          <div class="overlay">Jeremias 29:13</div>
+    <section class="principles-dark" id="nossos-compromissos">
+      <div class="container">
+
+        <header class="principles-dark-header reveal">
+          <h2>
+            O que guia o <span>Aliance</span>
+          </h2>
+          <p>
+            Princípios aplicados na prática, refletidos diretamente
+            no funcionamento do sistema e nas decisões de produto.
+          </p>
+        </header>
+
+        <div class="principles-dark-grid reveal">
+
+          <article class="principle-dark-card">
+            <div class="icon">🧭</div>
+            <h4>Propósito claro</h4>
+            <p>
+              O Aliance existe para ajudar igrejas a organizarem pessoas,
+              ministérios e informações com responsabilidade.
+            </p>
+          </article>
+
+          <article class="principle-dark-card">
+            <div class="icon">🛠️</div>
+            <h4>Funcionalidade acima de tudo</h4>
+            <p>
+              Cada módulo resolve um problema real da rotina da igreja,
+              sem excesso de complexidade.
+            </p>
+          </article>
+
+          <article class="principle-dark-card">
+            <div class="icon">🔍</div>
+            <h4>Transparência e controle</h4>
+            <p>
+              Informações claras, dados confiáveis e relatórios acessíveis
+              para liderança e equipes.
+            </p>
+          </article>
+
+          <article class="principle-dark-card">
+            <div class="icon">🤝</div>
+            <h4>Compromisso contínuo</h4>
+            <p>
+              Evolução constante do sistema, ouvindo igrejas
+              e respeitando diferentes realidades.
+            </p>
+          </article>
+
         </div>
 
-        <div class="principle">
-          <div class="content" style="text-align:center">
-            <div style="font-size:42px;margin-bottom:.4rem">🧱</div>
-            <h4>Edificação</h4>
-            <p>Queremos edificar o Corpo de Cristo ao fornecer ferramentas robustas de gestão.</p>
-          </div>
-          <div class="overlay">Mateus 7:24-27</div>
-        </div>
-
-        <div class="principle">
-          <div class="content" style="text-align:center">
-            <div style="font-size:42px;margin-bottom:.4rem">✝️</div>
-            <h4>Glorificando a Cristo</h4>
-            <p>Servir a Cristo com dedicação é o que nos motiva todos os dias.</p>
-          </div>
-          <div class="overlay">Colossenses 3:23-24</div>
-        </div>
-
-        <div class="principle">
-          <div class="content" style="text-align:center">
-            <div style="font-size:42px;margin-bottom:.4rem">✔️</div>
-            <h4>Qualidade</h4>
-            <p>O Aliance é sinônimo de qualidade — soluções que fazem a diferença.</p>
-          </div>
-          <div class="overlay">1 Coríntios 10:31</div>
-        </div>
       </div>
     </section>
 
@@ -328,53 +451,78 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" style="padding: 4rem 0;">
+    <section class="faq-v2" id="faq">
       <div class="container">
-        <h2 style="text-align: center;">Perguntas Frequentes</h2>
-        <p style="text-align: center; margin-bottom: 2rem;">Veja algumas dúvidas comuns e suas respostas.</p>
 
-        <!-- Acordeão -->
-        <div class="faq-container">
-          <!-- Pergunta 1 -->
-          <div class="faq-item">
-            <button class="faq-question">O que é o Aliance | ERP para igrejas?</button>
-            <div class="faq-answer">
-              <p>
-                O Aliance é um ERP <i>(Enterprise Resource Planning)</i> desenvolvido especificamente para igrejas. 
-                Ele centraliza processos administrativos em uma única plataforma, oferecendo módulos para controle financeiro, gestão de membros, organização de eventos e demais operações essenciais.
-              </p>
+        <header class="faq-header reveal">
+          <h2>Perguntas frequentes</h2>
+          <p>
+            Reunimos aqui as principais dúvidas de quem está conhecendo o Aliance.
+          </p>
+        </header>
 
-            </div>
-          </div>
+        <div class="faq-list reveal">
 
-          <!-- Pergunta 2 -->
-          <div class="faq-item">
-            <button class="faq-question">Como posso começar a usar o Aliance?</button>
-            <div class="faq-answer">
-              <p>
-                Você pode iniciar o uso do Aliance imediatamente selecionando a opção “Comece gratuitamente” em nosso site e registrando sua igreja. 
-                O sistema oferece 15 dias de utilização gratuita para avaliação completa da plataforma.
-              </p>
+          <details class="faq-item">
+            <summary>O que é o Aliance?</summary>
+            <p>
+              O Aliance é um sistema de gestão desenvolvido exclusivamente para igrejas.
+              Ele centraliza membros, ministérios, eventos, financeiro e comunicação
+              em uma única plataforma.
+            </p>
+          </details>
 
-            </div>
-          </div>
+          <details class="faq-item">
+            <summary>Preciso assinar contrato ou fidelidade?</summary>
+            <p>
+              Não. O Aliance funciona por assinatura mensal.
+              Você pode cancelar quando quiser, sem multa ou burocracia.
+            </p>
+          </details>
 
-          <!-- Pergunta 3 -->
-          <div class="faq-item">
-            <button class="faq-question">O Aliance tem suporte?</button>
-            <div class="faq-answer">
-              <p>Sim! Oferecemos suporte completo para nossos clientes. Você pode entrar em contato conosco a qualquer momento através dos canais de comunicação disponíveis: Whatsapp e Email.</p>
-            </div>
-          </div>
+          <details class="faq-item">
+            <summary>Posso testar antes de contratar?</summary>
+            <p>
+              Sim. Você tem 15 dias para testar todas as funcionalidades do sistema
+              gratuitamente.
+            </p>
+          </details>
 
-          <!-- Pergunta 4 -->
-          <div class="faq-item">
-            <button class="faq-question">Quais são os planos oferecidos pelo Aliance?</button>
-            <div class="faq-answer">
-              <p>Oferecemos o plano Básico, Essencial e Premium. Cada plano tem diferentes recursos e preços. Consulte nossa seção de preços para mais detalhes.</p>
-            </div>
-          </div>
+          <details class="faq-item">
+            <summary>O sistema serve para igrejas pequenas?</summary>
+            <p>
+              Sim. O Aliance foi pensado para igrejas de todos os tamanhos,
+              desde congregações pequenas até igrejas com múltiplos ministérios.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Preciso de treinamento para usar?</summary>
+            <p>
+              Não. O sistema é intuitivo e fácil de usar.
+              Além disso, disponibilizamos materiais de apoio e suporte
+              sempre que necessário.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>O Aliance oferece suporte?</summary>
+            <p>
+              Sim. Nosso suporte está disponível via WhatsApp e e-mail
+              para ajudar com dúvidas técnicas ou uso do sistema.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Meus dados estão seguros?</summary>
+            <p>
+              Sim. Utilizamos boas práticas de segurança, criptografia
+              e backups regulares para garantir a proteção das informações.
+            </p>
+          </details>
+
         </div>
+
       </div>
     </section>
 
