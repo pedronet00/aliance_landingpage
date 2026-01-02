@@ -36,7 +36,9 @@ body {
 
 /* HERO */
 .hero-financeiro {
-  background: linear-gradient(135deg, #0e0e11, #1b1b26);
+  background-image: url('../assets/images/b.png');
+  background-size: cover;
+  background-position: bottom;
   color: #fff;
   padding: 6rem 0;
 }
@@ -105,46 +107,163 @@ body {
 }
 
 .image img {
-  width: 100%;
-  border-radius: 14px;
-  box-shadow: 0 20px 40px rgba(0,0,0,.15);
+  width: 600px;
 }
 
 /* BENEFÍCIOS */
-.benefits {
-  background: var(--muted);
-  padding: 4rem 0;
+.benefits-strong {
+  background: linear-gradient(180deg, #f9fafb, #f3f4f6);
+  padding: 5rem 0;
 }
 
-.grid-3 {
+.benefits-header {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 3rem;
+}
+
+.benefits-header h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.benefits-header p {
+  margin-top: .8rem;
+  color: #4b5563;
+}
+
+.benefits-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
 }
 
-/* FEATURES */
-.features {
-  padding: 4.5rem 0;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.8rem;
-}
-
-.feature {
+/* CARD */
+.benefit-card {
   background: #fff;
-  border-radius: 12px;
-  padding: 1.6rem;
-  border: 1px solid #e5e7eb;
-  transition: transform .25s ease, box-shadow .25s ease;
+  border-radius: 16px;
+  padding: 2rem 1.8rem;
+  box-shadow: 0 12px 30px rgba(0,0,0,.06);
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
 }
 
-.feature:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+.benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,.12);
 }
+
+.benefit-icon {
+  font-size: 1.8rem;
+  display: inline-block;
+  margin-bottom: .8rem;
+}
+
+.benefit-card h3 {
+  margin-bottom: .6rem;
+}
+
+.benefit-card p {
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.benefit-foot {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+
+/* FEATURES */
+.features-list {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.features-items {
+  margin-top: 3rem;
+  list-style: none;
+  padding: 0;
+}
+
+.feature-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.feature-item:last-child {
+  border-bottom: none;
+}
+
+.feature-index {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.feature-content h3 {
+  margin-bottom: .4rem;
+}
+
+.feature-content p {
+  color: #4b5563;
+  max-width: 600px;
+}
+
+/* hover sutil */
+.feature-item:hover .feature-index {
+  opacity: .75;
+}
+
+.visual-reports {
+  background: linear-gradient(180deg, #f9fafb, #ffffff);
+}
+
+.visual-reports .eyebrow {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: .75rem;
+}
+
+.visual-reports h2 {
+  max-width: 540px;
+  line-height: 1.2;
+}
+
+.visual-reports p {
+  max-width: 540px;
+  margin-top: 1rem;
+  color: #4b5563;
+}
+
+.report-points {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.2rem;
+}
+
+.report-points li {
+  margin-bottom: .45rem;
+  font-weight: 500;
+}
+
+/* imagem */
+.visual-reports .image-focus img {
+  border-radius: 12px;
+}
+
 
 /* CTA */
 .cta {
@@ -152,4 +271,105 @@ body {
   color: #fff;
   padding: 4rem 0;
   text-align: center;
+}
+
+.visual-finance {
+  background: #fff;
+}
+
+.visual-finance .eyebrow {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: .75rem;
+}
+
+.visual-finance h2 {
+  max-width: 520px;
+  line-height: 1.2;
+}
+
+.visual-finance p {
+  max-width: 520px;
+  margin-top: 1rem;
+  color: #4b5563;
+}
+
+.feature-points {
+  margin-top: 1.2rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.feature-points li {
+  margin-bottom: .45rem;
+  font-weight: 500;
+}
+
+/* IMAGEM */
+.image-focus figure {
+  margin: 0;
+}
+
+.image-focus img {
+  width: 650px;
+  border-radius: 16px;
+  transition: transform .4s ease;
+}
+
+.image-focus img:hover {
+  transform: translateY(-6px);
+}
+
+.image-focus figcaption {
+  margin-top: .6rem;
+  font-size: .75rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .split,
+  .split.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .split.reverse {
+    direction: ltr; /* evita bugs de ordem */
+  }
+
+  .visual-section .text {
+    order: 1;
+  }
+
+  .visual-section .image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
+
+
+  .visual-section .image {
+    order: 2;
+  }
+
+  .visual-section {
+    padding: 3.5rem 0;
+  }
+
+  .visual-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .visual-section p {
+    font-size: 1rem;
+  }
+
+  .visual-section ul {
+    margin-top: 1rem;
+  }
 }
